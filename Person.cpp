@@ -72,5 +72,3 @@ string Person::getTypeOfObj() const {
 	return "Person";
 }
 
-
-
