@@ -23,14 +23,8 @@ public:
     virtual string getTypeOfObj() const; //return "Employee"
 };
 
+void mixedArray(Person**& arrayPersonEmp, int numPersons, int numEmployees);
 
-void mixedArray(Person**& arrayPersonEmp, int numPersons, int numEmployees) {
-
-}
-
-
-void deleteMixedArray(Person**& arrayPersonEmp, int size) {
-
-}
+void deleteMixedArray(Person**& arrayPersonEmp, int size);
 
 #endif /* Employee_hpp */
