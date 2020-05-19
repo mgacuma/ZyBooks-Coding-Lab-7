@@ -65,6 +65,28 @@ string Employee::getTypeOfObj()const {
 	return "Employee";
 }
 
+void mixedArray(Person**& arrayPersonEmp, int numPersons, int numEmployees) {
 
+	arrayPersonEmp = new Person* [numPersons + numEmployees];
 
+	for (int i = 0; i < numPersons + numEmployees; i++) {
+		if (i < numPersons) {
+			arrayPersonEmp[i] = new Person();
+			arrayPersonEmp[i]->setEmail("personal@gmail.com");
+		}
+		else {
+			arrayPersonEmp[i] = new Employee();
+			arrayPersonEmp[i]->setEmail("work@gmail.com");
+		}
+	}
+}
 
+void deleteMixedArray(Person**& arrayPersonEmp, int size) {
+
+	for (int i = 0; i < size; i++) {
+		delete arrayPersonEmp[i];
+	}
+
+	delete[] arrayPersonEmp;
+	arrayPersonEmp = nullptr;
+}
